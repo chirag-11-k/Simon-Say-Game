@@ -4,7 +4,9 @@ let highestScore = 0;
 let body = document.querySelector('body');
 let p = document.querySelector('p');
 let h3 = document.querySelector('h3');
+let h2 = document.querySelector('h2');
 let btns = ["royalblue","red","green","yellow"];
+const modeToggle = document.getElementById('modeToggle');
 
 let started = false;
 let level = 0;
@@ -59,9 +61,12 @@ for(btn of allBtn){
 function checkAns(index){
    if(userSeq[index]==gameSeq[index]){
       if(userSeq.length == gameSeq.length){
-        body.classList.add("flashGreen",800);
+        document.body.classList.remove('dark-mode');
+        body.classList.add("flashGreen",);
+        
         setTimeout(() =>{
             body.classList.remove("flashGreen");
+            document.body.classList.add('dark-mode');
         },800)
         setTimeout(levelUp,1000);
       }
@@ -79,5 +84,40 @@ function checkAns(index){
         console.log(highestScore)
      }
      h3.innerHTML = ` Your All time Highest Score : ${highestScore}`;
+     document.body.classList.remove('dark-mode');
+     
    }
 }
+
+//Dark mode
+
+
+function setDarkMode(isDarkMode) {
+    if (isDarkMode) {
+        document.body.classList.add('dark-mode');
+        h2.innerText= "Dark Mode";
+    } else {
+        document.body.classList.remove('dark-mode');
+        h2.innerHTML="Light Mode";
+    }
+}
+
+// Function to toggle dark mode and store in locar storage
+function toggleDarkMode() {
+    if (modeToggle.checked) {
+        localStorage.setItem('darkMode', 'true'); // Save dark mode state
+    } else {
+        localStorage.setItem('darkMode', 'false'); // Save light mode state
+    }
+    setDarkMode(modeToggle.checked);
+}
+
+// Event listener for dark mode toggle
+modeToggle.addEventListener('change', toggleDarkMode);
+
+// Check local storage for dark mode preference on page load
+document.addEventListener('DOMContentLoaded', () => {
+    const isDarkMode = localStorage.getItem('darkMode') === 'true';
+    modeToggle.checked = isDarkMode; // Set toggle state
+    setDarkMode(isDarkMode); // Set dark mode based on preference
+});
