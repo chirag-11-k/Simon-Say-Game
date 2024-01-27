@@ -1,0 +1,43 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5vh;
+}
+main{
+    margin-top: 4vh;
+}
+h1{
+    font-size: 3rem;
+}
+p{
+    font-size: 1.5rem;
+    font-weight: 500;
+}
+.btn{
+    height: 175px;
+    width: 175px;
+    margin: 0.5rem;
+    border-radius: 10%;
+    border: 5px solid black;
+}
+.royalblue{
+    background-color: royalblue;
+}
+.red{
+    background-color: red;
+}
+.green{
+    background-color: green;
+}
+.yellow{
+    background-color: yellow;
+}
+.flash{
+    background-color: white;
+}
