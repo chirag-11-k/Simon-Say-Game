@@ -26,18 +26,18 @@ Development
 
 # Languages: HTML, CSS, JavaScript
 
-# Dependencies: None
+Dependencies: None
 
-# Setup: Open the index.html file in your web browser to play the game.
-Files:
+Setup: Open the index.html file in your web browser to play the game.
 
-# index.html: HTML file containing the game layout and structure.
+# Files:
+index.html: HTML file containing the game layout and structure.
 
-# style.css: CSS file for styling the game elements.
+style.css: CSS file for styling the game elements.
 
-# script.js: JavaScript file containing the game logic and functionality.
+script.js: JavaScript file containing the game logic and functionality.
 
-# README.MD: This file provides information about the game.
+README.MD: This file provides information about the game.
 Author
 
 # Developed by Chirag Kuriya
