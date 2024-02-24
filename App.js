@@ -95,7 +95,7 @@ function checkAns(index) {
       if(modeToggle.checked) {
         body.classList.add("dark-mode");
       }
-    },500)
+    },800)
   
    
   }
